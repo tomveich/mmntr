@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="211.18401"
+   height="42.938"
+   viewBox="0 0 55.875769 11.360679"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.1-rc (d9e8dc1fe0, 2025-03-10)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.367861"
+     inkscape:cx="94.811309"
+     inkscape:cy="87.631833"
+     inkscape:window-width="1440"
+     inkscape:window-height="863"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-62.441667,-26.458333)">
+    <g
+       id="g2"
+       transform="translate(-74.564347,29.588673)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:6.61458px;font-family:GothamSSm;-inkscape-font-specification:'GothamSSm Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ff0000;stroke-width:0"
+         x="147.85628"
+         y="5.0204716"
+         id="text1"><tspan
+           sodipodi:role="line"
+           id="tspan1"
+           style="font-size:6.61458px;text-align:start;text-anchor:start;fill:#1a1a1a;stroke-width:0"
+           x="147.85628"
+           y="5.0204716">Medimentor</tspan></text>
+      <g
+         style="fill:#000000"
+         id="g1"
+         transform="matrix(0.00826875,0,0,0.00826839,138.99047,6.4609476)">
+        <path
+           d="m 428,-451 -34,-51 q -5,-8 -14,-13 -9,-5 -19,-5 H 99 q -11,-26 -15,-50 -4,-24 -4,-50 0,-94 63,-157 63,-63 157,-63 52,0 99,22 47,22 81,62 34,-40 81,-62 47,-22 99,-22 94,0 157,63 63,63 63,157 0,26 -4,50 -4,24 -15,50 H 623 l -69,-102 q -6,-9 -15.5,-13.5 -9.5,-4.5 -20.5,-4.5 -13,0 -22.5,7.5 -9.5,7.5 -13.5,19.5 z m 52,345 -58,-52 Q 317,-252 250,-319 183,-386 145,-440 h 192 l 69,102 q 6,9 15.5,13.5 9.5,4.5 20.5,4.5 13,0 22.5,-7.5 9.5,-7.5 13.5,-19.5 l 54,-163 35,52 q 5,8 14,13 9,5 19,5 h 215 q -38,54 -105,121 -67,67 -172,161 z"
+           id="path1" />
+      </g>
+    </g>
+  </g>
+</svg>
