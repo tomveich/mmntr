@@ -1,0 +1,198 @@
+---
+layout: layout.njk
+title: Medimentor - Tvoja cesta na medicínu
+description: Moderná vzdelávacia platforma pre budúcich medikov. Študuj inteligentnejšie a s istotou zvládni prijímačky na medicínu.
+---
+
+
+<div class="flex flex-col min-h-[100dvh]" style="background-color: var(--md-sys-color-surface);">
+    
+
+    {% include "navigation.html" %}
+
+
+    <header class="flex-grow flex items-center py-12 md:py-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col gap-6">
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight" style="color: var(--md-sys-color-primary);">
+                        Premeň stres z<br> prijímačiek na istotu
+                    </h1>
+                    <ul class="space-y-4 text-lg" style="color: var(--md-sys-color-on-surface-variant);">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined mt-1" style="color: var(--md-sys-color-primary);">check</span>
+                            <span><strong class="font-medium">Overenými vedeckými metódami</strong>, ktoré ti pomôžu pamätať si viac</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined mt-1" style="color: var(--md-sys-color-primary);">check</span>
+                            <span><strong class="font-medium">S pomocou starších študentov</strong>, ktorí ti odovzdajú svoje know-how</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined mt-1" style="color: var(--md-sys-color-primary);">check</span>
+                            <span><strong class="font-medium">S modernou aplikáciou</strong>, ktorá ti dá kontrolu a istotu</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <md-filled-button href="#cta">
+                            Získaj prednostný prístup
+                            <span slot="icon-trailing" class="material-symbols-outlined">chevron_right</span>
+                        </md-filled-button>
+                    </div>
+                </div>
+                <div class="hidden md:block text-center">
+                    <img src="/assets/images/girl_crop.jpg" alt="Študentka medicíny" class="rounded-2xl w-auto mx-auto max-h-[65vh]">
+                </div>
+            </div>
+        </div>
+    </header>
+
+</div>
+
+
+<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Cítiš sa pri príprave stratený?</h2>
+        </div>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <md-outlined-card class="p-6 text-center">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="/assets/images/books.png" alt="Informačný chaos" class="w-full h-full object-scale-down" style="background-color: var(--md-sys-color-surface-container-highest);">
+                </div>
+                <h3 class="text-xl font-bold">Informačný chaos</h3>
+            </md-outlined-card>
+            <md-outlined-card class="p-6 text-center">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="/assets/images/brain.png" alt="Neefektívne učenie" class="w-full h-full object-scale-down" style="background-color: var(--md-sys-color-surface-container-highest);">
+                </div>
+                <h3 class="text-xl font-bold">Neefektívne učenie</h3>
+            </md-outlined-card>
+            <md-outlined-card class="p-6 text-center">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="/assets/images/deadline.png" alt="Stres a neistota" class="w-full h-full object-scale-down" style="background-color: var(--md-sys-color-surface-container-highest);">
+                </div>
+                <h3 class="text-xl font-bold">Stres a neistota</h3>
+            </md-outlined-card>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Veda, nie dohady.<br>Študuj inteligentnejšie.</h2>
+            <p class="mt-4 text-lg" style="color: var(--md-sys-color-on-surface-variant);">
+                Medimentor nie je len ďalšia zbierka modeloviek. Je to <span class="font-medium p-1 rounded-md" style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">inteligentná platforma</span> navrhnutá tak, aby <span class="font-medium p-1 rounded-md" style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">maximalizovala každú minútu</span> tvojho učenia.
+            </p>
+            <ul class="mt-8 space-y-6">
+                <li class="flex gap-4">
+                    <span class="material-symbols-outlined mt-1" style="color: var(--md-sys-color-secondary);">science</span>
+                    <div>
+                        <h4 class="font-bold text-lg">Vedecky overené metódy</h4>
+                        <p style="color: var(--md-sys-color-on-surface-variant);">Naše algoritmy kombinujú Spaced Repetition a Active Recall, aby si si fakty pamätal dlhodobo, nielen do zajtra.</p>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <span class="material-symbols-outlined mt-1" style="color: var(--md-sys-color-secondary);">touch_app</span>
+                        <div>
+                        <h4 class="font-bold text-lg">Interaktívne a pútavé</h4>
+                        <p style="color: var(--md-sys-color-on-surface-variant);">Otázky v "TikTok" štýle ťa udržia v pozore. Takéto učenie ťa bude baviť.</p>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <span class="material-symbols-outlined mt-1" style="color: var(--md-sys-color-secondary);">all_inbox</span>
+                        <div>
+                        <h4 class="font-bold text-lg">Všetko na jednom mieste</h4>
+                        <p style="color: var(--md-sys-color-on-surface-variant);">Kompletný a štruktúrovaný obsah, ktorý ťa prevedie celou prípravou krok za krokom.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <img src="/assets/images/screenshot2.png" class="rounded-2xl inline-block" alt="Ukážka aplikácie Medimentor">
+        </div>
+    </div>
+</section>
+
+<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container-low);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Uč sa od najlepších</h2>
+            <p class="mt-4 text-lg" style="color: var(--md-sys-color-on-surface-variant);">Náš obsah je tvorený a overovaný tímom úspešných študentov medicíny z popredných fakúlt v SR a ČR.</p>
+        </div>
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <img src="/assets/lectors/1.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Martin">
+                <h3 class="mt-4 font-bold text-lg">Martin, 4. ročník, 1.LF Praha</h3>
+                <p class="mt-1 text-sm" style="color: var(--md-sys-color-on-surface-variant);">Chémia bola moja nočná mora. Mojím cieľom je vysvetliť ti zložité koncepty jednoducho a jasne.</p>
+            </div>
+                <div class="text-center">
+                <img src="/assets/lectors/2.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Andrej">
+                <h3 class="mt-4 font-bold text-lg">Andrej, 2. ročník, 3.LF Praha</h3>
+                <p class="mt-1 text-sm" style="color: var(--md-sys-color-on-surface-variant);">Rád sa posúvam ďalej a vždy sa snažím dosiahnuť niečo viac.</p>
+            </div>
+                <div class="text-center">
+                <img src="/assets/lectors/3.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Barbora">
+                <h3 class="mt-4 font-bold text-lg">Barbora, 4. ročník, 2. LF Praha</h3>
+                <p class="mt-1 text-sm" style="color: var(--md-sys-color-on-surface-variant);">Ukážem ti, že fyzika nemusí byť strašiak a že sa dá zvládnuť s prehľadom.</p>
+            </div>
+                <div class="text-center">
+                <img src="/assets/lectors/4.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Peter">
+                <h3 class="mt-4 font-bold text-lg">Peter, 4. ročník, MUNI Brno</h3>
+                <p class="mt-1 text-sm" style="color: var(--md-sys-color-on-surface-variant);">Mojím cieľom je pomôcť ti vybudovať si systém v biológii, aby si na nič dôležité nezabudol.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Tvoj priamy plán k úspechu</h2>
+        </div>
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full text-2xl font-bold" style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">1</div>
+                <h4 class="mt-4 font-bold text-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">play_circle</span>Sleduj lekcie
+                </h4>
+                <p class="mt-1" style="color: var(--md-sys-color-on-surface-variant);">Prehľadné video lekcie od našich mentorov ti vysvetlia kľúčové témy.</p>
+            </div>
+                <div class="text-center">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full text-2xl font-bold" style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">2</div>
+                <h4 class="mt-4 font-bold text-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">psychology</span>Trénuj inteligentne
+                </h4>
+                <p class="mt-1" style="color: var(--md-sys-color-on-surface-variant);">Precvičuj si otázky v našej aplikácii, ktorá ti ich bude servírovať v optimálnych intervaloch.</p>
+            </div>
+                <div class="text-center">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full text-2xl font-bold" style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">3</div>
+                <h4 class="mt-4 font-bold text-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">bar_chart</span>Sleduj svoj pokrok
+                </h4>
+                <p class="mt-1" style="color: var(--md-sys-color-on-surface-variant);">Sleduj, ako sa zlepšuješ a získaj istotu potrebnú pre úspech na prijímačkách.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cta" style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <div class="h-full hidden md:block">
+                <img src="/assets/images/doctor.png" alt="Úspešný medik" class="w-auto mx-auto h-full max-h-[55vh] object-cover" >
+            </div>
+            <div class="">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Buď pripravený na štart</h2>
+                <p class="mt-4 text-lg">
+                    Nenechaj si ujsť spustenie platformy.<br>
+                    Zapíš sa na náš waitinglist a získaj exkluzívnu zľavu 30% a prednostný prístup.
+                </p>
+                <div class="mt-8">
+                    <md-filled-button>Chcem zľavu a skorší prístup!</md-filled-button>
+                </div>
+                <p class="mt-4 text-sm">Rešpektujeme tvoje súkromie. Žiadny spam.</p>
+            </div>
+        </div>
+        </div>
+</section>

@@ -1,0 +1,46 @@
+---
+layout: layout.njk
+title: Získaj modelovky na lekárske fakulty zdarma
+description: Vyber si, na ktoré lekárske fakulty chceš modelové otázky a my ti ich obratom pošleme na mail.
+---
+
+{% include "header.html" %}
+
+<section class="py-16 sm:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        <h2 class="text-2xl font-bold" style="color: var(--md-sys-color-on-surface-variant);">Aké modelovky ti máme zaslať?</h2>
+
+        <form action="https://medimentor.us1.list-manage.com/subscribe/post" method="POST" class="mt-8 text-left">
+            <input type="hidden" name="u" value="1d62e0c8719ce9761f331ca8e">
+            <input type="hidden" name="id" value="da387bf083">
+
+            <div class="grid grid-cols-2 gap-x-8 gap-y-2">
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center"><md-checkbox id="group_1" name="group[64098][1]" value="1"></md-checkbox><label for="group_1" class="ml-2">🇨🇿 1. LF UK</label></div>
+                    <div class="flex items-center"><md-checkbox id="group_2" name="group[64098][2]" value="1"></md-checkbox><label for="group_2" class="ml-2">🇨🇿 2. LF UK</label></div>
+                    <div class="flex items-center"><md-checkbox id="group_4" name="group[64098][4]" value="1"></md-checkbox><label for="group_4" class="ml-2">🇨🇿 3. LF UK</label></div>
+                    <div class="flex items-center"><md-checkbox id="group_8" name="group[64098][8]" value="1"></md-checkbox><label for="group_8" class="ml-2">🇨🇿 LF MUNI</label></div>
+                    <div class="flex items-center"><md-checkbox id="group_16" name="group[64098][16]" value="1"></md-checkbox><label for="group_16" class="ml-2">🇨🇿 LF UPOL</label></div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center"><md-checkbox id="group_32" name="group[64098][32]" value="1"></md-checkbox><label for="group_32" class="ml-2">🇸🇰 LF UK</label></div>
+                    <div class="flex items-center"><md-checkbox id="group_64" name="group[64098][64]" value="1"></md-checkbox><label for="group_64" class="ml-2">🇸🇰 JLF UK</liabel></div>
+                    <div class="flex items-center"><md-checkbox id="group_128" name="group[64098][128]" value="1"></md-checkbox><label for="group_128" class="ml-2">🇸🇰 LF UPJŠ</label></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                <md-outlined-text-field label="Tvoj email" type="email" name="MERGE0" id="MERGE0" required class="w-full"></md-outlined-text-field>
+                <md-outlined-text-field label="Krstné meno (napr. Oliver)" type="text" name="MERGE1" id="MERGE1" required class="w-full"></md-outlined-text-field>
+            </div>
+
+            <div class="mt-8 text-center">
+                <md-filled-button type="submit">Poslať</md-filled-button>
+                <p class="text-xs mt-4 max-w-prose mx-auto" style="color: var(--md-sys-color-on-surface-variant);">
+                    Kliknutím na tlačidlo "Poslať" súhlasíš s tým, že ti na Email pošleme modelové otázky. Zároveň súhlasíš s tým, že ti môžeme posielať dôležité informácie ohľadom prijímačiek, termínov, a marketingové správy.
+                </p>
+            </div>
+        </form>
+    </div>
+</section>
