@@ -1,0 +1,5 @@
+{
+    "layout": "post-layout.njk",
+    "tags": "post_sk",
+    "permalink": "/sk/blog/{{ title | slug }}/"
+}

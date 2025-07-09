@@ -1,0 +1,30 @@
+---
+layout: layout.njk
+title: Medimentor Blog
+description: Tips, tricks, and guides on how to successfully get into medical school.
+permalink: /blog/index.html
+---
+
+{% include "header.html" %}
+
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="space-y-12">
+        {# This loops over the 'post_en' collection, showing only English posts #}
+        {% for post in collections.post_en | reverse %}
+            <article class="flex flex-col border-b pb-8" style="border-color: var(--md-sys-color-outline-variant);">
+                <time datetime="{{ post.date | isoDate }}" class="text-sm" style="color: var(--md-sys-color-on-surface-variant);">
+                    {{ post.date | displayDate }}
+                </time>
+                <h2 class="mt-2 text-3xl font-bold">
+                    <a href="{{ post.url }}" class="hover:underline" style="color: var(--md-sys-color-on-surface);">{{ post.data.title }}</a>
+                </h2>
+                <p class="mt-4" style="color: var(--md-sys-color-on-surface-variant);">
+                    {{ post.data.description }}
+                </p>
+                <div class="mt-4">
+                    <md-text-button href="{{ post.url }}">Read more</md-text-button>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</div>

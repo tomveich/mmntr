@@ -1,22 +1,22 @@
 ---
 layout: layout.njk
-title: Stránka sa nenašla (404)
+title: "404"
 description: Zdá sa, že táto stránka neexistuje. Skontrolujte adresu alebo sa vráťte na domovskú stránku.
 permalink: 404.html
 ---
 
-{% include "navigation.html" %}
+{% include "header.html" %}
 
 
 <div class="text-center py-24 sm:py-32 px-4">
     <p class="text-8xl font-semibold" style="color: var(--md-sys-color-primary);">404</p>
-    <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">Stránka sa nenašla</h1>
+    <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">{{ i18n[lang].404_title }}</h1>
     <p class="mt-6 text-base leading-7" style="color: var(--md-sys-color-on-surface-variant);">
-        Ospravedlňujeme sa, ale stránku, ktorú hľadáte, sme nenašli.
+        {{ i18n[lang].404_description }}
     </p>
     <div class="mt-10">
         <md-filled-button href="/">
-            Späť na domovskú stránku
+            Back to homepage
         </md-filled-button>
     </div>
 </div>

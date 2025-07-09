@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    {% include "partials/head-common.njk" %}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ title }}",
+      "description": "{{ description }}",
+      "datePublished": "{{ date | isoDate }}",
+      "author": { "@type": "Organization", "name": "Medimentor" }
+    }
+    </script>
+</head>
+<body class="antialiased">
+    {% include "navigation.html" %}
+
+    <main>
+        <header class="py-16 sm:py-24 text-center" style="background-color: var(--md-sys-color-surface-container);">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight" style="color: var(--md-sys-color-primary);">{{ title }}</h1>
+                <p class="mt-6 text-xl max-w-3xl mx-auto" style="color: var(--md-sys-color-on-surface-variant);">{{ description }}</p>
+                <div class="mt-8 text-sm" style="color: var(--md-sys-color-on-surface-variant);">
+                    <span>Published on {{ date | displayDate }}</span>
+                </div>
+            </div>
+        </header>
+        
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="prose dark:prose-invert lg:prose-lg max-w-none prose-h1:font-brockmann prose-h2:font-brockmann prose-h3:font-brockmann">
+<h2 class="text-xl font-bold">{{ i18n[lang].post_content }}</h2>
+                {{ content | toc | safe }}
+                <hr class="my-8">
+                {{ content | safe }}
+            </div>
+        </article>
+    </main>
+
+    {% include "footer.html" %}
+
+</body>
+</html>

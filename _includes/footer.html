@@ -9,26 +9,36 @@
                     Slovenská republika
                 </address>
             </div>
+            
+            
+            <!-- This is the updated blog post section -->
             <div class="flex flex-col gap-2">
-                <h3 class="font-bold text-lg mb-2" style="color: var(--md-sys-color-on-surface);">Blog</h3>
-                <a href="#" class="text-sm hover:underline">Porovnanie lekárskych fakúlt</a>
-                <a href="#" class="text-sm hover:underline">Najlepšie memorizačné techniky</a>
-                <a href="#" class="text-sm hover:underline">Time management pre študentov</a>
+                <h3 class="font-bold text-lg mb-2" style="color: var(--md-sys-color-on-surface);">{{ i18n[lang].footer_blog_heading }}</h3>
+                {# 1. Dynamically select the correct collection based on language #}
+                {% set localized_posts = collections['post_' + page.data.lang] %}
+                
+                {# 2. Loop through the 3 most recent posts #}
+                {% for post in localized_posts | reverse | slice(0, 3) %}
+                    <a href="{{ post.url }}" class="text-sm hover:underline">{{ post.data.title }}</a>
+                {% else %}
+                    <p class="text-sm">No posts yet.</p>
+                {% endfor %}
             </div>
+
             <div class="flex flex-col gap-2">
-                <h3 class="font-bold text-lg mb-2" style="color: var(--md-sys-color-on-surface);">Odkazy</h3>
+                <h3 class="font-bold text-lg mb-2" style="color: var(--md-sys-color-on-surface);">{{ i18n[lang].footer_links_heading }}</h3>
                 <a href="#" class="text-sm hover:underline">FAQ</a>
                 <a href="#" class="text-sm hover:underline">Obchodné podmienky</a>
                 <a href="#" class="text-sm hover:underline">Spracovanie osobných údajov</a>
             </div>
             <div class="flex flex-col gap-2">
-                <h3 class="font-bold text-lg mb-2" style="color: var(--md-sys-color-on-surface);">Kontakt</h3>
+                <h3 class="font-bold text-lg mb-2" style="color: var(--md-sys-color-on-surface);">{{ i18n[lang].footer_contact_heading }}</h3>
                 <a href="mailto:info@medimentor.sk" class="text-sm hover:underline">info@medimentor.sk</a>
                 <span class="text-sm">+421 987 654 321</span>
             </div>
         </div>
         <div class="mt-8 pt-4 border-t text-center text-sm" style="border-color: var(--md-sys-color-outline);">
-            &copy; 2025 Medimentor, a.b.c. Všetky práva vyhradené.
+            &copy; 2025 Medimentor. Všetky práva vyhradené.
         </div>
     </div>
 </footer>

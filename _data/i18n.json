@@ -1,0 +1,26 @@
+{
+    "en": {
+      "nav_blog": "Blog",
+      "nav_login": "Sign In",
+      "nav_pricing": "Pricing",
+      "nav_waitlist": "Join Waitlist",
+      "footer_blog_heading": "Blog",
+      "footer_links_heading": "Links",
+      "footer_contact_heading": "Contact",
+      "post_content": "Post content",
+      "404_title": "Page not found",
+      "404_description": "We are sorry, we couldn't find this page"
+    },
+    "sk": {
+      "nav_blog": "Blog",
+      "nav_login": "Prihlásenie",
+      "nav_pricing": "Cenník",
+      "nav_waitlist": "Získať prístup",
+      "footer_blog_heading": "Blog",
+      "footer_links_heading": "Odkazy",
+      "footer_contact_heading": "Kontakt",
+      "post_content": "Obsah článku",
+      "404_title": "Stránka sa nenašla",
+      "404_description": "Je nám to ľúto, vyskytla sa chyba a túto stránku nevieme nájsť"
+    }
+  }

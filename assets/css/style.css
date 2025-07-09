@@ -79,8 +79,10 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Brockmann', sans-serif;
+    /* font-family: 'Brockmann', sans-serif; */
+    font-family: 'Figtree', serif;
 }
+
 
 /* Helper for Material Symbols icon alignment */
 .material-symbols-outlined {

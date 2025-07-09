@@ -1,0 +1,20 @@
+---
+layout: layout.njk
+title: Email confirmed
+description: Your e-mail was confirmed successfully. Welcome to Medimentor!
+---
+
+{% include "header.html" %}
+
+<div class="text-center py-24 sm:py-32 px-4">
+    <span class="material-symbols-outlined text-6xl" style="color: var(--md-sys-color-primary);">verified</span>
+    <h2 class="mt-4 text-3xl md:text-4xl font-bold tracking-tight">Done. Thanks!</h2>
+    <p class="mt-6 text-lg leading-8 max-w-2xl mx-auto" style="color: var(--md-sys-color-on-surface-variant);">
+        Your e-mail was confirmed. The mock questions are heading into your inbox!
+    </p>
+    <div class="mt-10">
+        <md-filled-button href="/">
+            Back to homepage
+        </md-filled-button>
+    </div>
+</div>

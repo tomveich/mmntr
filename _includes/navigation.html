@@ -1,10 +1,19 @@
 <nav>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-6">
-        <a href="/">
+        <a href="{{ localePrefix }}/">
             <h1 class="text-2xl font-bold" style="color: var(--md-sys-color-primary);">medimentor</h1>
         </a>
-        <div>
-            <md-outlined-button>Prihlásenie</md-outlined-button>
+        <div class="flex items-center gap-2">
+            <md-text-button href="{{ localePrefix }}/blog/">{{ i18n[lang].nav_blog }}</md-text-button>
+
+            {# A conditional block #}
+            {% if lang == 'sk' or lang == 'cz' %}
+                <md-text-button href="{{ localePrefix }}/pricing/">{{ i18n[lang].nav_pricing }}</md-text-button>
+            {% else %}
+                <md-text-button href="/#cta">{{ i18n[lang].nav_waitlist }}</md-text-button>
+            {% endif %}
+
+            <md-outlined-button href="https://web.medimentor.app">{{ i18n[lang].nav_login }}</md-outlined-button>
         </div>
     </div>
 </nav>
