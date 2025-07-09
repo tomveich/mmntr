@@ -1,19 +1,56 @@
-<nav>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-6">
-        <a href="{{ localePrefix }}/">
-            <h1 class="text-2xl font-bold" style="color: var(--md-sys-color-primary);">medimentor</h1>
-        </a>
-        <div class="flex items-center gap-2">
-            <md-text-button href="{{ localePrefix }}/blog/">{{ i18n[lang].nav_blog }}</md-text-button>
+<nav class="relative" style="background-color: var(--md-sys-color-surface);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-6">
+            <a href="{{ localePrefix }}/">
+                <h1 class="text-2xl font-bold" style="color: var(--md-sys-color-primary);">medimentor</h1>
+            </a>
 
-            {# A conditional block #}
+            <div class="hidden md:flex items-center gap-2">
+                <md-text-button href="{{ localePrefix }}/blog/">{{ i18n[lang].nav_blog }}</md-text-button>
+
+                {% if lang == 'sk' or lang == 'cz' %}
+                    <md-text-button href="{{ localePrefix }}/pricing/">{{ i18n[lang].nav_pricing }}</md-text-button>
+                {% else %}
+                    <md-text-button href="/#cta">{{ i18n[lang].nav_waitlist }}</md-text-button>
+                {% endif %}
+
+                <md-outlined-button href="https://web.medimentor.app">{{ i18n[lang].nav_login }}</md-outlined-button>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t" style="border-color: var(--md-sys-color-outline-variant);">
+            <a href="{{ localePrefix }}/blog/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">{{ i18n[lang].nav_blog }}</a>
+            
             {% if lang == 'sk' or lang == 'cz' %}
-                <md-text-button href="{{ localePrefix }}/pricing/">{{ i18n[lang].nav_pricing }}</md-text-button>
+                <a href="{{ localePrefix }}/pricing/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">{{ i18n[lang].nav_pricing }}</a>
             {% else %}
-                <md-text-button href="/#cta">{{ i18n[lang].nav_waitlist }}</md-text-button>
+                <a href="/#cta" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">{{ i18n[lang].nav_waitlist }}</a>
             {% endif %}
 
-            <md-outlined-button href="https://web.medimentor.app">{{ i18n[lang].nav_login }}</md-outlined-button>
+            <a href="https://web.medimentor.app" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800">{{ i18n[lang].nav_login }}</a>
         </div>
     </div>
 </nav>
+
+<script>
+    // Simple script to toggle the mobile menu
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // Optional: change icon on click
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', !isExpanded);
+        menuButton.querySelector('.material-symbols-outlined').textContent = isExpanded ? 'menu' : 'close';
+    });
+</script>
