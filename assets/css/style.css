@@ -81,11 +81,17 @@ body {
 h1, h2, h3, h4 {
     /* font-family: 'Brockmann', sans-serif; */
     font-family: 'Figtree', serif;
+    font-family: 'Brockmann', serif;
+
 }
 
 
 /* Helper for Material Symbols icon alignment */
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     vertical-align: bottom;
+
+    &.center {
+        line-height: inherit;
+    }
 }
