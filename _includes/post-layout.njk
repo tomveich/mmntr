@@ -3,16 +3,36 @@
 <head>
     {% include "partials/head-common.njk" %}
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "{{ title }}",
-      "description": "{{ description }}",
-      "datePublished": "{{ date | isoDate }}",
-      "author": { "@type": "Organization", "name": "Premedis" }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url }}"
+  },
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "datePublished": "{{ date | isoDate }}",
+  "dateModified": "{{ dateModified | isoDate if dateModified else date | isoDate }}",
+  {% if authorData %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ authorData.name }}",
+    "url": "{{ metadata.url }}{{ localePrefix }}/authors/{{ author }}/"
+  },
+  {% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "Premedis",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://premedis.com/assets/logo/logotext.svg"
     }
-    </script>
+  }
+}
+</script>
+
 </head>
 <body class="antialiased">
     {% include "navigation.html" %}
@@ -23,11 +43,44 @@
                 <h1 class="text-4xl md:text-5xl font-bold tracking-tight" style="color: var(--md-sys-color-primary);">{{ title }}</h1>
                 <p class="mt-6 text-xl max-w-3xl mx-auto" style="color: var(--md-sys-color-on-surface-variant);">{{ description }}</p>
                 <div class="mt-8 text-sm" style="color: var(--md-sys-color-on-surface-variant);">
-                    <span>Published on {{ date | displayDate }}</span>
+<span>
+  {# Always display the published date if it exists #}
+  {% if date %}
+    {{ i18n[lang].published_on }} {{ date | displayDate }}
+  {% endif %}
+
+  {# Only display the updated date if it exists AND is different from the published date #}
+  {% if dateModified and (date | isoDate) != (dateModified | isoDate) %}
+    {% if date %} · {% endif %}
+
+    {{ i18n[lang].updated_on }} {{ dateModified | displayDate }}
+  {% endif %}
+</span>
                 </div>
             </div>
         </header>
-        
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# This section only appears if a 'summary' exists in the front matter #}
+    {% if summary %}
+        <section 
+            class="my-8 p-6 rounded-xl" 
+            style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
+            
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined">lightbulb</span>
+                <h2 class="text-xl font-bold">{{ i18n[lang].summary_heading }}</h2>
+            </div>
+
+            <div class="prose dark:prose-invert mt-4 prose-p:text-[color:var(--md-sys-color-on-primary-container)] prose-li:text-[color:var(--md-sys-color-on-primary-container)]">
+                {{ summary | markdown | safe }}
+            </div>
+        </section>
+    {% endif %}
+</div>
+
+
+                
         <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 <div class="prose dark:prose-invert lg:prose-lg max-w-none prose-h1:font-brockmann prose-h2:font-brockmann prose-h3:font-brockmann">
 <h2 class="text-xl font-bold">{{ i18n[lang].post_content }}</h2>
@@ -37,6 +90,25 @@
             </div>
         </article>
     </main>
+
+    {# The authorData is now automatically prepared for us! #}
+{% if authorData %}
+    <section class="py-12" style="background-color: var(--md-sys-color-surface-container-high);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-6">
+                <img src="{{ authorData.photo }}" alt="{{ authorData.name }}" class="w-24 h-24 rounded-full">
+                <div>
+                    <h3 class="text-lg font-bold" style="color: var(--md-sys-color-on-surface-variant);">{{ i18n[lang].about_the_author }}</h3>
+                    <p class="mt-1 font-bold text-xl">
+                        <a href="{{ localePrefix }}/authors/{{ author }}/" class="hover:underline">{{ authorData.name }}</a>
+                    </p>
+                    <p class="mt-2 text-sm" style="color: var(--md-sys-color-on-surface-variant);">{{ authorData.authority }}</p>
+                    <p class="mt-2 text-sm" style="color: var(--md-sys-color-on-surface-variant);">{{ authorData.short_bio }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
 
     {% include "footer.html" %}
 

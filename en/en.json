@@ -1,4 +1,5 @@
 {
     "lang": "en",
-    "permalink": "{{ page.filePathStem | replace('/en/', '/') | replace('index', '') }}/",    "localePrefix": ""
+    "permalink": "{{ page.filePathStem | replace('/en/', '/') | replace('index', '') }}/",
+    "localePrefix": ""
 }

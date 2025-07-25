@@ -95,3 +95,10 @@ h1, h2, h3, h4 {
         line-height: inherit;
     }
 }
+
+ol li::marker {
+    color: currentColor !important;
+}
+ul li::marker {
+    color: currentColor !important;
+}

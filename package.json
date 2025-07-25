@@ -21,7 +21,8 @@
   "homepage": "https://github.com/tomveich/mmntr#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "eleventy-plugin-toc": "^1.1.5"
+    "eleventy-plugin-toc": "^1.1.5",
+    "markdown-it": "^14.1.0"
   },
   "dependencies": {
     "eleventy-plugin-date": "^1.0.0"

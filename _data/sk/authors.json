@@ -1,0 +1,16 @@
+{
+    "oliver": {
+        "name": "Oliver Petrovič",
+        "authority": "Karlova Univerzita - Molekulární biologie a biochemie organismů",
+        "photo": "/assets/lectors/sk/oliver.jpg",
+        "short_bio": "Chémia bola moja nočná mora. Mojím cieľom je vysvetliť ti zložité koncepty jednoducho a jasne.",
+        "full_bio": "Som študentom molekulárnej biológie a biochémie organizmov na Karlovej Univerzite."
+    },
+    "sara": {
+        "name": "Sára Tokárová",
+        "authority": "Odborníčka na prijímačky a lekárske fakulty",
+        "photo": "/assets/lectors/sk/sara.jpg",
+        "short_bio": "Orientujem sa v prijímačkách na všetky lekárske fakulty v ČR a SR. Rada učím ľudí 'učiť sa'.",
+        "full_bio": "Full bio"
+    }
+}

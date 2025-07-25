@@ -2,6 +2,7 @@
 
 const pluginTOC = require('eleventy-plugin-toc');
 const pluginDate = require("eleventy-plugin-date");
+const markdownIt = require("markdown-it");
 
 module.exports = function(eleventyConfig) {
   // Tell Eleventy to copy the assets folder
@@ -24,6 +25,30 @@ module.exports = function(eleventyConfig) {
     }
   });
   
+  eleventyConfig.addFilter("where", function(array, key, value) {
+    return array.filter(item => {
+      // Handle nested keys like "data.author"
+      const keys = key.split('.');
+      let current = item;
+      for (const k of keys) {
+        if (current === undefined) return false;
+        current = current[k];
+      }
+      return current === value;
+    });
+  });
+
+  eleventyConfig.addFilter("split", function(string, separator) {
+    return string.split(separator);
+  });
+
+  const md = new markdownIt({
+    html: true,
+  });
+
+  eleventyConfig.addFilter("markdown", (content) => {
+    return md.render(content);
+  });
 
   return {
     dir: {
@@ -31,6 +56,8 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       output: "_site",
     },
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+    markdownTemplateEngine: "njk"
   };
 };

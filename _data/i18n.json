@@ -9,7 +9,11 @@
       "footer_contact_heading": "Contact",
       "post_content": "Post content",
       "404_title": "Page not found",
-      "404_description": "We are sorry, we couldn't find this page"
+      "404_description": "We are sorry, we couldn't find this page",
+      "summary_heading": "Summary",
+      "about_the_author": "About the author",
+      "published_on": "Published on",
+      "updated_on": "Updated on"
     },
     "sk": {
       "nav_blog": "Blog",
@@ -21,6 +25,10 @@
       "footer_contact_heading": "Kontakt",
       "post_content": "Obsah článku",
       "404_title": "Stránka sa nenašla",
-      "404_description": "Je nám to ľúto, vyskytla sa chyba a túto stránku nevieme nájsť"
+      "404_description": "Je nám to ľúto, vyskytla sa chyba a túto stránku nevieme nájsť",
+      "summary_heading": "Zhrnutie",
+      "about_the_author": "O autorovi",
+      "published_on": "Publikované",
+      "updated_on": "Aktualizované"
     }
   }

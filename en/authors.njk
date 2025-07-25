@@ -1,0 +1,45 @@
+---
+pagination:
+  data: en.authors
+  size: 1
+  alias: authorKey
+permalink: "/authors/{{ authorKey }}/"
+layout: layout.njk
+eleventyComputed:
+  # This sets the page title dynamically
+  title: "Articles by: {{ sk.authors[authorKey].name }}"
+---
+
+{# This line creates the 'author' object for the rest of the template #}
+{% set author = sk.authors[authorKey] %}
+
+{% include "header.html" %}
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Author's Main Bio -->
+    <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-8">
+        <img src="{{ author.photo }}" alt="{{ author.name }}" class="w-32 h-32 rounded-full">
+        <div>
+            <h1 class="text-3xl font-bold">{{ author.name }}</h1>
+            <p class="mt-4 text-lg" style="color: var(--md-sys-color-on-surface-variant);">{{ author.full_bio }}</p>
+        </div>
+    </div>
+
+    <hr class="my-12" style="border-color: var(--md-sys-color-outline-variant);">
+
+    <!-- List of Posts by this Author -->
+    <h2 class="text-2xl font-bold">Articles from author {{ author.name | split(',') | first }}</h2>
+    <div class="mt-8 space-y-8">
+        {% set authorPosts = collections.post_en | where("data.author", authorKey) %}
+        {% for post in authorPosts | reverse %}
+            <div>
+                <h3 class="text-xl font-bold">
+                    <a href="{{ post.url }}" class="hover:underline">{{ post.data.title }}</a>
+                </h3>
+                <p class="mt-2 text-sm" style="color: var(--md-sys-color-on-surface-variant);">{{ post.data.description }}</p>
+            </div>
+        {% else %}
+            <p>No articles from this author yet.</p>
+        {% endfor %}
+    </div>
+</div>
