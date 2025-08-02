@@ -17,6 +17,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("sk/blog/**/*.{jpg,jpeg,png,gif,svg}");
   eleventyConfig.addPassthroughCopy("en/blog/**/*.{jpg,jpeg,png,gif,svg}");
 
+  // Also copy robots.txt
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  
   // Activate the Table of Contents plugin
   eleventyConfig.addPlugin(pluginTOC, {
     tags: ['h2', 'h3'],

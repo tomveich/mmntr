@@ -3,21 +3,17 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+<urlset xmlns="http://www.w3.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {% for page in collections.all %}
-  {# Only include pages with a URL and a language #}
+  {# Only include pages with a URL and a language to exclude things like README #}
   {% if page.url and page.data.lang %}
   <url>
     <loc>{{ metadata.url }}{{ page.url | url }}</loc>
     <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
 
-    {# Check if this page is part of a translation group #}
     {% if page.data.translationKey %}
-      {# Get the array of all alternate pages for this key #}
       {% set alternates = collections.pagesByTranslation[page.data.translationKey] %}
-      
-      {# Loop through the alternates to create xhtml:link tags #}
       {% for altPage in alternates %}
         <xhtml:link
           rel="alternate"
@@ -25,7 +21,6 @@ eleventyExcludeFromCollections: true
           href="{{ metadata.url }}{{ altPage.url | url }}"/>
       {% endfor %}
       
-      {# Add the x-default link, pointing to the default language (en) version #}
       {% set defaultPage = alternates | where("data.lang", "en") | first %}
       {% if defaultPage %}
         <xhtml:link

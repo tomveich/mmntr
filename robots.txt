@@ -1,0 +1,13 @@
+# Allow all friendly crawlers full access
+User-agent: *
+Allow: /
+
+# Explicitly allow AI crawlers
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Point all crawlers to the sitemap
+Sitemap: https://premedis.com/sitemap.xml
