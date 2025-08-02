@@ -3,7 +3,7 @@ layout: post-layout.njk
 title: 1.LF vs 2.LF vs 3.LF v Prahe - Ktorá lekárska fakulta je najlepšia?
 description: Porovnanie 1.LF, 2.LF a 3.LF. Všetko čo potrebuješ vedieť o lekárskych fakultách na Karlovej Univerzite v Prahe.
 date: 2025-07-24
-dateModified: 2025-07-25
+dateModified: 2025-08-02
 author: "sara"
 summary: "
     * 1LF - Klasika a tradícia + najviac prijatých + aj zubné lekárstvo\n
@@ -15,7 +15,7 @@ summary: "
 
 | Kritérium        | 1\. LF UK (Prvá lekárska fakulta)  | 2\. LF UK (Druhá lekárska fakulta)           | 3\. LF UK (Tretia lekárska fakulta)          |
 | ---------------- | ---------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| Povesť           | "Klasika a tradícia"               | "Veda a Motol"                               | "Inovácia a komunikácia"                     |
+| Povesť           | Klasika a tradícia               | Veda a Motol                               | Inovácia a komunikácia                     |
 | Veľkosť          | Najväčšia (~350 prijatých)         | Stredná (~180 prijatých)                     | Najmenšia (~160 prijatých)                   |
 | Prijímačky       | 1-kolové: Písomný test             | 2-kolové: Test + Ústny pohovor               | 2-kolové: Test + Ústny pohovor               |
 | Predmety v teste | Biológia, Chémia, Fyzika           | Biológia, Chémia, Fyzika + Test predpokladov | Biológia, Chémia, Fyzika (niekedy s výberom) |
@@ -85,4 +85,13 @@ Hľadá priateľskú a podporujúcu komunitu.
 
 
 Máš stále problém s výberom? Poďme sa pozrieť, ako by vyzerala každá fakulta na Tindri:
+
+
+{% imagegrid %}
+  ![alt text](tinder-1lf.png "1.LF")
+  ![alt text](tinder-2lf.png "2.LF")
+  ![alt text](tinder-3lf.png "3.LF")
+{% endimagegrid %}
+
+
 Nech sa vydáš na akúkoľvek cestu, môžeš rátať s tým, že Premedis ťa na ňu poriadne pripraví. Vďaka kurzom prispôsobeným pre všetky fakulty môžeš mať istotu, že ti nič nebude chýbať na tvoj deň D. Veľa šťastia a dúfame, že sa vidíme!

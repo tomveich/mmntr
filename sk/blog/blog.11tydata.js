@@ -1,7 +1,7 @@
 module.exports = {
     layout: "post-layout.njk",
-    tags: "post_en",
-    permalink: "/blog/{{ title | slug }}/",
+    tags: "post_sk",
+    permalink: "/sk/blog/{{ page.fileSlug }}/",
     eleventyComputed: {
         // This is a function that returns the author object
         authorData: (data) => {
@@ -9,8 +9,8 @@ module.exports = {
           if (!data.author) {
             return null;
           }
-          // Look up the author ID in the global en.authors object
-          return data.en.authors[data.author];
+          // Look up the author ID in the global sk.authors object
+          return data.sk.authors[data.author];
         }
-    }
+      }
 }
