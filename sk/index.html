@@ -223,22 +223,54 @@ translationKey: home
 </section>
 
 <section id="cta" style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
             <div class="h-full hidden md:block">
-                <img src="/assets/images/doctor.png" alt="Úspešný medik" class="w-auto mx-auto h-full max-h-[55vh] object-cover" >
+                <img src="/assets/images/doctor.png" alt="Úspešný medik" class="w-auto mx-auto h-full max-h-[55vh] object-cover">
             </div>
-            <div class="">
+            <div>
                 <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Buď pripravený na štart</h2>
                 <p class="mt-4 text-lg">
-                    Nenechaj si ujsť spustenie platformy.<br>
-                    Zapíš sa na náš waitinglist a získaj exkluzívnu zľavu 30% a prednostný prístup.
+                    Nenechaj si ujsť spustenie platformy. Zapíš sa na náš waitinglist a získaj exkluzívnu zľavu a prednostný prístup.
                 </p>
-                <div class="mt-8">
-                    <md-filled-button>Chcem zľavu a skorší prístup!</md-filled-button>
-                </div>
+
+                <!-- START: New Mailchimp Form -->
+                <form action="https://medimentor.us1.list-manage.com/subscribe/post?u=1d62e0c8719ce9761f331ca8e&amp;id=da387bf083&amp;f_id=00047ae1f0" method="post" name="mc-embedded-subscribe-form" target="_blank" class="mt-8">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <md-outlined-text-field 
+                            label="Meno" 
+                            type="text" 
+                            name="FNAME" 
+                            class="w-full">
+                        </md-outlined-text-field>
+                        
+                        
+                        <md-outlined-text-field 
+                            label="Email " 
+                            type="email" 
+                            name="EMAIL" 
+                            required 
+                            class="w-full">
+                        </md-outlined-text-field>
+                    </div>
+
+                    <!-- This is the anti-bot field from Mailchimp, it must be present -->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_1d62e0c8719ce9761f331ca8e_da387bf083" tabindex="-1" value="">
+                    </div>
+
+                    <div class="mt-6">
+                        <md-filled-button type="submit" name="subscribe">
+                            Chcem zľavu a skorší prístup!
+                        </md-filled-button>
+                    </div>
+
+                </form>
+                <!-- END: New Mailchimp Form -->
+
                 <p class="mt-4 text-sm">Rešpektujeme tvoje súkromie. Žiadny spam.</p>
             </div>
         </div>
-        </div>
+    </div>
 </section>
