@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
+  "scripts": {
     "start": "concurrently \"npm:watch:eleventy\" \"npm:watch:css\"",
     "build": "npm run build:css && npm run build:eleventy",
     "watch:eleventy": "npx @11ty/eleventy --serve",
     "build:eleventy": "npx @11ty/eleventy",
-    "watch:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./_site/assets/css/style.css --watch",
-    "build:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./_site/assets/css/style.css --minify"
+    "watch:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./assets/css/style.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./assets/css/style.css --minify"
   },
   "repository": {
     "type": "git",
