@@ -77,20 +77,20 @@ Modulový a integrovaný: Toto je jej najväčšia odlišnosť. Namiesto oddelen
 Výučba prebieha hlavne vo Fakultnej nemocnici Královské Vinohrady. Fakulta kladie veľký dôraz na prevenciu, hygienu, etiku a celostný (holistický) prístup k pacientovi.
 ### 🫂 Atmoška
 Vďaka najmenšiemu počtu študentov je atmosféra takmer rodinná. Vzťahy medzi študentmi a vyučujúcimi sú veľmi blízke a neformálne. Je to ideálne prostredie pre tímových hráčov.
-### 🤓 Je pre teba ideálna? Ak si študent, ktorý
-Chce medicínu chápať v súvislostiach, nie ako oddelené predmety.
-Je komunikatívny, empatický a rád pracuje v tíme.
-Preferuje moderné, interaktívne metódy učenia pred pasívnym memorovaním.
-Hľadá priateľskú a podporujúcu komunitu.
+### 🤓 Je pre teba ideálna? Ak si študent, ktorý:
+- Chce medicínu chápať v súvislostiach, nie ako oddelené predmety.
+- Je komunikatívny, empatický a rád pracuje v tíme.
+- Preferuje moderné, interaktívne metódy učenia pred pasívnym memorovaním.
+- Hľadá priateľskú a podporujúcu komunitu.
 
 
 Máš stále problém s výberom? Poďme sa pozrieť, ako by vyzerala každá fakulta na Tindri:
 
 
 {% imagegrid %}
-  ![alt text](tinder-1lf.png "1.LF")
-  ![alt text](tinder-2lf.png "2.LF")
-  ![alt text](tinder-3lf.png "3.LF")
+  {% image "./tinder-1lf.png", "Zhrnutie výhod 1.LF" %}
+  {% image "./tinder-2lf.png", "Zhrnutie výhod 2.LF" %}
+  {% image "./tinder-3lf.png", "Zhrnutie výhod 3.LF" %}
 {% endimagegrid %}
 
 

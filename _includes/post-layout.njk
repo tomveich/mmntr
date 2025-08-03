@@ -72,7 +72,7 @@
                 <h2 class="text-xl font-bold">{{ i18n[lang].summary_heading }}</h2>
             </div>
 
-            <div class="prose dark:prose-invert mt-4 prose-p:text-[color:var(--md-sys-color-on-primary-container)] prose-li:text-[color:var(--md-sys-color-on-primary-container)]">
+            <div class="summary-content mt-4">
                 {{ summary | markdown | safe }}
             </div>
         </section>
@@ -82,8 +82,7 @@
 
                 
         <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-<div class="prose dark:prose-invert lg:prose-lg max-w-none prose-h1:font-brockmann prose-h2:font-brockmann prose-h3:font-brockmann">
-<h2 class="text-xl font-bold">{{ i18n[lang].post_content }}</h2>
+            <div class="article-content">
                 {{ content | toc | safe }}
                 <hr class="my-8">
                 {{ content | safe }}

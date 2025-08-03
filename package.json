@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+"scripts": {
+    "start": "concurrently \"npm:watch:eleventy\" \"npm:watch:css\"",
+    "build": "npm run build:css && npm run build:eleventy",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "build:eleventy": "npx @11ty/eleventy",
+    "watch:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./_site/assets/css/style.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./_site/assets/css/style.css --minify"
   },
   "repository": {
     "type": "git",
@@ -21,11 +25,14 @@
   "homepage": "https://github.com/tomveich/mmntr#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "eleventy-plugin-toc": "^1.1.5",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.1.0",
+    "tailwindcss": "^4.1.11"
   },
   "dependencies": {
+    "concurrently": "^9.2.0",
     "eleventy-plugin-date": "^1.0.0"
   }
 }

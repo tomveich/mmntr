@@ -3,33 +3,30 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.w3.org/schemas/sitemap/0.9"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{% for page in collections.all %}
-  {# Only include pages with a URL and a language to exclude things like README #}
-  {% if page.url and page.data.lang %}
+{%- for page in collections.all %}
+  {%- if page.url and page.data.lang %}
   <url>
     <loc>{{ metadata.url }}{{ page.url | url }}</loc>
     <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
-
-    {% if page.data.translationKey %}
-      {% set alternates = collections.pagesByTranslation[page.data.translationKey] %}
-      {% for altPage in alternates %}
-        <xhtml:link
-          rel="alternate"
-          hreflang="{{ altPage.data.lang }}"
-          href="{{ metadata.url }}{{ altPage.url | url }}"/>
-      {% endfor %}
-      
-      {% set defaultPage = alternates | where("data.lang", "en") | first %}
-      {% if defaultPage %}
-        <xhtml:link
-          rel="alternate"
-          hreflang="x-default"
-          href="{{ metadata.url }}{{ defaultPage.url | url }}"/>
-      {% endif %}
-    {% endif %}
+  {%- if page.data.translationKey %}
+    {%- set alternates = collections.pagesByTranslation[page.data.translationKey] %}
+    {%- for altPage in alternates %}
+    <xhtml:link
+      rel="alternate"
+      hreflang="{{ altPage.data.lang }}"
+      href="{{ metadata.url }}{{ altPage.url | url }}"/>
+    {%- endfor %}
+    {%- set defaultPage = alternates | where("data.lang", "en") | first %}
+    {%- if defaultPage %}
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="{{ metadata.url }}{{ defaultPage.url | url }}"/>
+    {%- endif %}
+  {%- endif %}
   </url>
-  {% endif %}
-{% endfor %}
+  {%- endif %}
+{%- endfor %}
 </urlset>

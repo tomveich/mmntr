@@ -79,10 +79,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-    /* font-family: 'Brockmann', sans-serif; */
-    font-family: 'Figtree', serif;
+    /* font-family: 'Figtree', sans-serif; */
     font-family: 'Brockmann', serif;
-
 }
 
 
@@ -108,3 +106,156 @@ ul li::marker {
     margin-bottom: 0;
     border-radius: 0.75rem; /* rounded-xl */
 }
+
+
+/* 
+Fix for Material Web components with Tailwind's Preflight
+*/
+md-filled-button,
+md-outlined-button,
+md-text-button,
+md-elevated-button,
+md-tonal-button {
+  /* This prevents some of Tailwind's resets from breaking the component's layout */
+  display: inline-flex;
+
+  padding-block: calc((var(--_container-height) - max(var(--_label-text-line-height),var(--_icon-size)))/2);
+  padding-inline-start: var(--_leading-space);
+  padding-inline-end: var(--_trailing-space);
+}
+
+
+
+/* --- START: Add these new styles for blog post content --- */
+
+.article-content {
+  /* Set base text color and size */
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+
+  /* Handle dark mode text color */
+  :is(.dark) & {
+    color: var(--md-sys-color-on-surface-variant);
+  }
+
+  /* Headings */
+  h2, h3, h4 {
+    font-family: 'Brockmann', sans-serif;
+    color: var(--md-sys-color-on-surface);
+    @apply font-bold tracking-tight mt-10 mb-4;
+
+    :is(.dark) & {
+      color: var(--md-sys-color-on-surface);
+    }
+  }
+
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+
+  /* Paragraphs and Lists */
+  p, ul, ol {
+    @apply mb-6;
+  }
+
+  ul {
+    @apply list-disc pl-6;
+  }
+
+  ol {
+    @apply list-decimal pl-6;
+  }
+
+  li > p {
+    @apply mt-2;
+  }
+  
+  /* Links */
+  a {
+    color: var(--md-sys-color-primary);
+    @apply font-medium underline hover:no-underline;
+
+    :is(.dark) & {
+      color: var(--md-sys-color-primary);
+    }
+  }
+
+  /* Blockquotes */
+  blockquote {
+    @apply border-l-4 pl-4 italic my-8;
+    border-color: var(--md-sys-color-outline);
+  }
+
+  /* Images inside the article */
+  img {
+    @apply rounded-xl my-8;
+  }
+
+
+  table {
+    @apply w-full my-8 text-left border-collapse;
+  }
+
+  thead {
+    /* Use a subtle background for the table header */
+    background-color: var(--md-sys-color-surface-container-low);
+  }
+
+  th {
+    /* Style for header cells */
+    color: var(--md-sys-color-on-surface);
+    @apply p-4 font-bold border-b-2;
+    border-color: var(--md-sys-color-outline);
+  }
+
+  tbody tr {
+    /* Border between rows */
+    /*
+    @apply border-b;
+    border-color: var(--md-sys-color-outline-variant);
+    */
+  }
+
+  /* Zebra striping for alternating row colors */
+  tbody tr:nth-child(even) {
+    background-color: var(--md-sys-color-surface-container-lowest);
+  }
+
+  td {
+    /* Style for standard data cells */
+    @apply p-4 align-middle;
+  }
+}
+
+/* --- END: New styles --- */
+
+
+  /* --- START: Add these new styles for the summary card --- */
+
+.summary-content {
+  /* Set base text color for the summary card */
+  color: var(--md-sys-color-on-primary-container);
+
+  /* Target paragraphs and list items inside the summary */
+  p, ul, ol, li {
+    color: var(--md-sys-color-on-primary-container);
+  }
+
+  ul {
+    @apply list-disc pl-5; /* Use a slightly smaller indent */
+  }
+
+  ol {
+    @apply list-decimal pl-5;
+  }
+
+  /* Ensure links inside the summary are also styled correctly */
+  a {
+    /* Use the main primary color for links to make them stand out */
+    color: var(--md-sys-color-primary);
+    @apply font-medium underline;
+  }
+}
+
+/* --- END: New styles --- */

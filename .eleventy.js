@@ -1,9 +1,51 @@
 // .eleventy.js
 
+const path = require("path");
 const pluginTOC = require('eleventy-plugin-toc');
 const pluginDate = require("eleventy-plugin-date");
 const markdownIt = require("markdown-it");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const Image = require("@11ty/eleventy-img");
+
+
+// --- Async Shortcode for responsive images ---
+// This function needs to be defined in the top-level scope to see `path` and `Image`
+async function imageShortcode(src, alt, sizes = "100vw") {
+  if (alt === undefined) {
+    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+  }
+
+  // Resolve the full path to the image relative to the page
+  let fullSrc = path.join(path.dirname(this.page.inputPath), src);
+
+  let metadata = await Image(fullSrc, {
+    widths: [300, 600, 900, 1200],
+    formats: ["avif", "webp", "jpeg"], // Added Avif as it's modern and even better
+    outputDir: "./_site/img/",
+    filenameFormat: function (id, src, width, format, options) {
+      const extension = path.extname(src);
+      const name = path.basename(src, extension);
+      return `${name}-${width}w.${format}`;
+    }
+  });
+
+  let lowsrc = metadata.jpeg[0];
+  let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
+
+  return `<picture>
+    ${Object.values(metadata).map(imageFormat => {
+      return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
+    }).join("\n")}
+      <img
+        src="${lowsrc.url}"
+        width="${highsrc.width}"
+        height="${highsrc.height}"
+        alt="${alt}"
+        loading="lazy"
+        decoding="async">
+    </picture>`;
+}
+
 
 module.exports = function(eleventyConfig) {
 
@@ -58,6 +100,8 @@ module.exports = function(eleventyConfig) {
   });
   // END: Add the new image-grid shortcode
   
+  // Image shortcode for more responsive and faster images
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   eleventyConfig.addFilter("split", function(string, separator) {
     return string.split(separator);
