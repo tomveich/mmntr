@@ -7,6 +7,12 @@
 <meta name="og:description" property="og:description" content="{{ description }}">
 <meta name="og:image" property="og:image" content="https://placehold.co/1200x630/0F4C81/FFFFFF?text=Premedis">
 
+<link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+
+{% if noindex %}
+  <meta name="robots" content="noindex">
+{% endif %}
+
 <link rel="icon" type="image/svg+xml" href="https://placehold.co/96x96/0F4C81/FFFFFF?text=P">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
