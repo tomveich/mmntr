@@ -8,8 +8,8 @@
     "build": "npm run build:css && npm run build:eleventy",
     "watch:eleventy": "npx @11ty/eleventy --serve",
     "build:eleventy": "npx @11ty/eleventy",
-    "watch:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./assets/css/style.css --watch",
-    "build:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./assets/css/style.css --minify"
+    "watch:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./assets/css/min.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./assets/css/min.css --minify"
   },
   "repository": {
     "type": "git",
