@@ -1,9 +1,16 @@
 {
     "oliver": {
         "name": "Oliver Petrovič",
-        "authority": "Charles University - Molecular Biology and Biochemistry of Organisms",
+        "authority": "Molecular Biology Student (Charles University) and Study Performance Strategist",
         "photo": "/assets/lectors/sk/oliver.jpg",
-        "short_bio": "Chémia bola moja nočná mora. Mojím cieľom je vysvetliť ti zložité koncepty jednoducho a jasne.",
-        "full_bio": "Som študentom molekulárnej biológie a biochémie organizmov na Karlovej Univerzite."
+        "short_bio": "My name is Oliver, and I'm the founder of this blog. As a molecular biology student at Charles University, I have deep insight into the natural science foundations that are key to medicine. However, my greatest passion is combining this scientific knowledge with strategies for effective learning, time management, and mental resilience to help you master challenging preparations with not just knowledge, but also a clear overview.",
+        "full_bio": "My name is Oliver. I am the founder of this blog and a student of Molecular Biology and Biochemistry of Organisms at the Faculty of Science, Charles University in Prague. I have always been fascinated by biology and its practical applications in medicine. I have also translated my knowledge into successful research on the impact of sleep and lifestyle on health. I founded this blog to share not only my knowledge of biology with you but, above all, proven strategies for how to learn more effectively, combat procrastination, and maintain mental well-being during the challenging admissions period. I believe that the right system and motivation are just as important as the knowledge itself, and my goal is to give you both."
+    },
+    "sara": {
+        "name": "Sára Tokárová",
+        "authority": "Admissions Process Research Specialist",
+        "photo": "/assets/lectors/sk/sara.jpg",
+        "short_bio": "My name is Sára, and as the main author of this blog, I am dedicated to a thorough research of admissions processes for medical faculties. I use my passion for working with information and clear communication to turn complex requirements and curricula into practical guides for future medical students. My goal is to give you clarity and confidence on the path to your dream.",
+        "full_bio": "My name is Sára, and I am the author and editor behind the content of this blog. Although my professional path leads to the world of media, I have extensive experience in research and working with expert sources, which I am now fully utilizing for you. My job is to thoroughly analyze admissions procedures, compare information from official sources, and track all changes so that you always have up-to-date and accurate content available. Since I recently went through the challenges of choosing a university myself, I understand very well the questions and uncertainties you are currently facing. Therefore, my personal mission is to give you not only proven information but also the self-confidence and strategy you need for a successful journey towards the dream of becoming a doctor."
     }
 }

@@ -13,7 +13,10 @@
       "summary_heading": "Summary",
       "about_the_author": "About the author",
       "published_on": "Published on",
-      "updated_on": "Updated on"
+      "updated_on": "Updated on",
+      "all_rights_reserved": "All rights reserved",
+      "terms_of_service": "Terms of Service",
+      "data_and_privacy": "Data & Privacy"
     },
     "sk": {
       "nav_blog": "Blog",
@@ -29,6 +32,9 @@
       "summary_heading": "Zhrnutie",
       "about_the_author": "O autorovi",
       "published_on": "Publikované",
-      "updated_on": "Aktualizované"
+      "updated_on": "Aktualizované",
+      "all_rights_reserved": "Všetky práva vyhradené",
+      "terms_of_service": "Obchodné podmienky",
+      "data_and_privacy": "Spracovanie osobných údajov"
     }
   }

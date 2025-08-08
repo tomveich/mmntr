@@ -8,6 +8,26 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const Image = require("@11ty/eleventy-img");
 
 
+// For flattening objects for testing, can be removed later
+const flattenObject = (Object) => {
+  const result = {}
+  const returnFlatenObject = (obj, parentKey='') => {
+      for (key in obj) {
+          const newParent = parentKey + key
+          const value = obj[key]
+          if (typeof value === 'object') {
+              returnFlatenObject(value, newParent + '.')
+          } else {
+              result[newParent] = value
+          }
+      }
+  }
+  returnFlatenObject(obj, parent)
+  return result
+}
+
+
+
 // --- Async Shortcode for responsive images ---
 // This function needs to be defined in the top-level scope to see `path` and `Image`
 async function imageShortcode(src, alt, sizes = "100vw") {
@@ -107,6 +127,9 @@ module.exports = function(eleventyConfig) {
     return string.split(separator);
   });
 
+  eleventyConfig.addFilter("flatten", function(object) {
+    return flattenObject(object);
+  });
 
   // For SEO purposes - To tell google that the slovak pricing page is just a slovak
   // variation of the english pricing page. For this, we need to create a collection
