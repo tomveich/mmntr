@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="793.701"
+   height="559.37"
+   viewBox="0 0 793.7 559.37"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="learningcurve-original.svg"
+   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.8793068"
+     inkscape:cx="431.58997"
+     inkscape:cy="258.72653"
+     inkscape:window-width="1440"
+     inkscape:window-height="863"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <style
+     id="style1"><![CDATA[.B{fill:#1a1c1e}.C{font-family:Brockmann}.D{font-weight:bold}.E{stroke-linejoin:round}]]></style>
+  <g
+     id="g19"
+     inkscape:label="waves">
+    <path
+       fill="#f5faff"
+       d="M0 0h793.7v559.37H0z"
+       id="path1" />
+    <path
+       d="M718.11 86.929c-96.372-.826-151.18-11.339-151.18-11.339v408.19h151.18"
+       fill="#0567ff"
+       id="path2" />
+    <path
+       d="M718.11 143.62c-209.15 2.873-264.57-68.032-264.57-68.032v408.19h264.57"
+       fill="#3886ff"
+       id="path3" />
+    <path
+       d="M718.11 238.11C415.75 221.432 340.16 75.59 340.16 75.59v408.19h377.95"
+       fill="#6ba5ff"
+       id="path4" />
+    <path
+       d="M718.11 332.6C231.23 320.374 226.77 75.59 226.77 75.59v408.19h491.34"
+       fill="#9ec4ff"
+       id="path5" />
+    <path
+       d="M 716.11049,445.98 C 73.590492,431.148 78.310492,75.59 78.310492,75.59 V 483.78 H 716.11049"
+       fill="#d1e3ff"
+       id="path6" />
+  </g>
+  <g
+     stroke="#1a1c1e"
+     id="g9">
+    <g
+       fill="none"
+       stroke-width="9.449"
+       class="E"
+       id="g8"
+       inkscape:label="g8">
+      <path
+         d="M75.591 483.78V75.59z"
+         id="path7"
+         style="stroke-width:5.66929139;stroke-dasharray:none" />
+      <path
+         d="m75.591 483.78h642.52z"
+         id="path8"
+         style="stroke-width:5.66929139;stroke-dasharray:none" />
+    </g>
+  </g>
+  <text
+     x="360.17001"
+     y="540.28699"
+     font-size="40px"
+     xml:space="preserve"
+     class="B C D"
+     id="text8"><tspan
+       x="360.17001"
+       y="540.28699"
+       stroke="none"
+       id="tspan8"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Brockmann;-inkscape-font-specification:'Brockmann Semi-Bold'">Čas</tspan></text>
+  <text
+     transform="rotate(-90)"
+     x="-406.547"
+     y="51.202999"
+     font-size="40.001px"
+     xml:space="preserve"
+     class="B C D"
+     id="text9"><tspan
+       x="-406.547"
+       y="51.202999"
+       stroke="none"
+       id="tspan9"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Brockmann;-inkscape-font-specification:'Brockmann Semi-Bold'">Zapamätanie</tspan></text>
+  <g
+     fill="#dae3ed"
+     id="g11">
+    <circle
+       cx="226.77"
+       cy="51.969"
+       r="14.173"
+       id="circle9" />
+    <circle
+       cx="340.16"
+       cy="51.969"
+       r="14.173"
+       id="circle10" />
+    <circle
+       cx="453.54"
+       cy="51.969"
+       r="14.173"
+       id="circle11" />
+  </g>
+  <g
+     font-size="17.333"
+     class="B C D"
+     id="g13">
+    <text
+       x="223.392"
+       y="58.035"
+       xml:space="preserve"
+       id="text11"><tspan
+         x="223.392"
+         y="58.035"
+         id="tspan11">1</tspan></text>
+    <text
+       x="335.14"
+       y="58.113"
+       xml:space="preserve"
+       id="text12"><tspan
+         x="335.14"
+         y="58.113"
+         id="tspan12">2</tspan></text>
+    <text
+       x="448.309"
+       y="58.035"
+       xml:space="preserve"
+       id="text13"><tspan
+         x="448.309"
+         y="58.035"
+         id="tspan13">3</tspan></text>
+  </g>
+  <path
+     d="M566.93 51.969h109.61zm-491.339 0h86.929z"
+     fill="none"
+     stroke="#dae3ed"
+     stroke-width="28.346"
+     class="E"
+     id="path13" />
+  <g
+     class="C D"
+     id="g16">
+    <text
+       x="121.44147"
+       y="433.573"
+       fill="#ebf0f8"
+       font-size="26.667px"
+       xml:space="preserve"
+       id="text14"><tspan
+         x="121.44147"
+         y="433.573"
+         class="B"
+         id="tspan14"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Brockmann;-inkscape-font-specification:'Brockmann Semi-Bold'">Krivka zapamätania</tspan></text>
+    <text
+       font-size="21.333px"
+       style="white-space:pre"
+       xml:space="preserve"
+       class="B"
+       id="text15"><tspan
+         x="69.581001"
+         y="59.143002"
+         id="tspan15"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Brockmann;-inkscape-font-specification:'Brockmann Semi-Bold'">Expozícia</tspan></text>
+    <text
+       x="561.83301"
+       y="58.035"
+       font-size="17.333px"
+       xml:space="preserve"
+       class="B"
+       id="text16"><tspan
+         x="561.83301"
+         y="58.035"
+         id="tspan16">4. <tspan
+   style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Brockmann;-inkscape-font-specification:'Brockmann Semi-Bold'"
+   id="tspan17">Opakovanie</tspan></tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="793.701"
+   height="559.37"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="learningcurve-dark.svg"
+   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.7923208"
+     inkscape:cx="352.1301"
+     inkscape:cy="277.03425"
+     inkscape:window-width="1440"
+     inkscape:window-height="863"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <style
+     id="style1"><![CDATA[.B{font-weight:bold}.C{font-family:Brockmann}.D{writing-mode:lr-tb}.E{direction:ltr}.F{fill:#1a1c1e}.G{stroke:#1a1c1e}.H{font-size:17.333px}.I{stroke-linejoin:round}]]></style>
+  <path
+     d="M0 0h793.701v559.37H0z"
+     fill="#f5faff"
+     id="path1"
+     style="fill:#1b1e1f;fill-opacity:1" />
+  <path
+     d="M718.11 86.929c-96.372-.826-151.181-11.339-151.181-11.339V483.78H718.11"
+     fill="#0567ff"
+     id="path2"
+     style="fill:#6db2ee;fill-opacity:1" />
+  <path
+     d="M718.11 143.622c-209.15 2.873-264.567-68.032-264.567-68.032V483.78H718.11"
+     fill="#3886ff"
+     id="path3"
+     style="fill:#3f9ae9;fill-opacity:1" />
+  <path
+     d="M718.11 238.11c-302.362-16.678-377.953-162.52-377.953-162.52V483.78H718.11"
+     fill="#6ba5ff"
+     id="path4"
+     style="fill:#1981dc;fill-opacity:1" />
+  <path
+     d="M718.11 332.598C231.232 320.373 226.772 75.591 226.772 75.591V483.78H718.11"
+     fill="#9ec4ff"
+     id="path5"
+     style="fill:#1466ae;fill-opacity:1" />
+  <path
+     d="M718.11 445.984C75.591 431.152 80.315 75.591 80.315 75.591V483.78H718.11"
+     fill="#d1e3ff"
+     id="path6"
+     style="fill:#0f4c81;fill-opacity:1" />
+  <g
+     fill="none"
+     stroke-width="9.449"
+     class="G I"
+     id="g8">
+    <path
+       d="M75.591 483.78V75.591z"
+       id="path7" />
+    <path
+       d="M75.591 483.78h642.52z"
+       id="path8" />
+  </g>
+  <text
+     xml:space="preserve"
+     x="360.17"
+     y="540.287"
+     font-size="40"
+     class="B C D E F G"
+     id="text8"
+     style="fill:#e2e2e6;fill-opacity:1"><tspan
+       x="360.17"
+       y="540.287"
+       stroke="none"
+       id="tspan8"
+       style="fill:#e2e2e6;fill-opacity:1">Čas</tspan></text>
+  <text
+     xml:space="preserve"
+     x="-406.547"
+     y="51.203"
+     transform="rotate(270)"
+     font-size="40.001"
+     class="B C D E F G"
+     id="text9"
+     style="fill:#e2e2e6;fill-opacity:1"><tspan
+       x="-406.547"
+       y="51.203"
+       stroke="none"
+       id="tspan9"
+       style="fill:#e2e2e6;fill-opacity:1">Zapamätanie</tspan></text>
+  <g
+     fill="#dae3ed"
+     id="g11">
+    <circle
+       cx="226.772"
+       cy="51.969"
+       r="14.173"
+       id="circle9" />
+    <circle
+       cx="340.158"
+       cy="51.969"
+       r="14.173"
+       id="circle10" />
+    <circle
+       cx="453.543"
+       cy="51.969"
+       r="14.173"
+       id="circle11" />
+  </g>
+  <text
+     xml:space="preserve"
+     x="223.392"
+     y="58.035"
+     class="B C D E F H"
+     id="text11"><tspan
+       x="223.392"
+       y="58.035"
+       id="tspan11">1</tspan></text>
+  <text
+     xml:space="preserve"
+     x="335.14"
+     y="58.113"
+     class="B C D E F H"
+     id="text12"><tspan
+       x="335.14"
+       y="58.113"
+       id="tspan12">2</tspan></text>
+  <text
+     xml:space="preserve"
+     x="448.309"
+     y="58.035"
+     class="B C D E F H"
+     id="text13"><tspan
+       x="448.309"
+       y="58.035"
+       id="tspan13">3</tspan></text>
+  <path
+     d="M566.929 51.969h109.606zm-491.338 0h86.929z"
+     fill="none"
+     stroke="#dae3ed"
+     stroke-width="28.347"
+     class="I"
+     id="path13" />
+  <text
+     xml:space="preserve"
+     x="92.623"
+     y="458.775"
+     font-size="26.667"
+     fill="#ebf0f8"
+     class="B C D E G"
+     id="text14"
+     style="fill:#e2e2e6;fill-opacity:1"><tspan
+       x="92.623"
+       y="458.775"
+       stroke="none"
+       class="F"
+       id="tspan14"
+       style="fill:#e2e2e6;fill-opacity:1">Krivka zapamätania</tspan></text>
+  <text
+     xml:space="preserve"
+     style="white-space:pre"
+     font-size="21.333"
+     class="B C D E F"
+     id="text15"><tspan
+       x="69.581"
+       y="59.143"
+       id="tspan15">Expozícia</tspan></text>
+  <text
+     xml:space="preserve"
+     x="561.833"
+     y="58.035"
+     class="B C D E F H"
+     id="text16"><tspan
+       x="561.833"
+       y="58.035"
+       id="tspan16">4. Opakovanie</tspan></text>
+</svg>

@@ -28,19 +28,19 @@ const flattenObject = (Object) => {
 
 
 
-// --- Async Shortcode for responsive images ---
-// This function needs to be defined in the top-level scope to see `path` and `Image`
-async function imageShortcode(src, alt, sizes = "100vw") {
+// --- Async Shortcode for responsive images (UPDATED) ---
+async function imageShortcode(src, alt, customClass = "", sizes = "100vw") {
   if (alt === undefined) {
     throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
   }
 
-  // Resolve the full path to the image relative to the page
-  let fullSrc = path.join(path.dirname(this.page.inputPath), src);
+  let imageSrc = src.startsWith('/')
+    ? `.${src}`
+    : path.join(path.dirname(this.page.inputPath), src);
 
-  let metadata = await Image(fullSrc, {
+  let metadata = await Image(imageSrc, {
     widths: [300, 600, 900, 1200],
-    formats: ["avif", "webp", "jpeg"], // Added Avif as it's modern and even better
+    formats: ["avif", "webp", "jpeg"],
     outputDir: "./_site/img/",
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
@@ -61,11 +61,11 @@ async function imageShortcode(src, alt, sizes = "100vw") {
         width="${highsrc.width}"
         height="${highsrc.height}"
         alt="${alt}"
+        class="${customClass}"
         loading="lazy"
         decoding="async">
     </picture>`;
 }
-
 
 module.exports = function(eleventyConfig) {
 

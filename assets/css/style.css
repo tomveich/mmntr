@@ -251,3 +251,24 @@ md-tonal-button {
   padding-inline-end: var(--_trailing-space);
 }
 /* --- END BUTTONS M3 vs Tailwind fix --- */
+
+
+/* Animated expansion/collapse of cards in FAQ */
+.faq-content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
+}
+
+.faq-item[open] > .faq-content-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.faq-content-wrapper > div {
+  overflow: hidden;
+}
+
+.faq-answer {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}

@@ -1,0 +1,114 @@
+---
+layout: layout.njk
+title: Naša Metóda - Premedis
+description: Zistite, ako Premedis kombinuje vedecky overené metódy učenia, flexibilitu a obsah od skutočných medikov, aby maximalizoval vaše šance na prijatie.
+translationKey: our-method
+---
+
+{% include "header.html" %}
+
+<section class="py-16 sm:py-24 text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Študuj inteligentnejšie, nie ťažšie</h1>
+        <div class="article-content mt-6">
+            <p class="text-xl">V Premedis veríme, že úspech na prijímačkách nie je o tom, kto sa učí najviac hodín, ale o tom, kto sa učí najefektívnejšie. Preto sme celú našu platformu postavili na troch kľúčových pilieroch.</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold tracking-tight">1. Vedecky overené metódy učenia</h2>
+                <div class="article-content mt-4">
+                    <p>Zabudni na pasívne čítanie a bezcieľne bifľovanie. Jadrom našej aplikácie je metóda <strong>Spaced Repetition (SRS)</strong>. Je to vedecky overený systém, ktorý ti otázky kladie v personalizovaných intervaloch. Týmto spôsobom si informácie ukladáš do dlhodobej pamäte, nie len do zajtra. Výsledok? Menej zabudnutých vedomostí a viac istoty v deň D.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <picture>
+                    <!-- dark mode first: when prefers-color-scheme is dark, browser uses this source -->
+                    <source
+                      srcset="/assets/images/learningcurve.svg"
+                      media="(prefers-color-scheme: dark)"
+                      type="image/svg+xml">
+                  
+                    <!-- fallback / light mode -->
+                    <img
+                      src="/assets/images/learningcurve.svg"
+                      alt="Grafické znázornenie Spaced Repetition metódy"
+                      width="800" height="450"
+                      loading="lazy"
+                      class="100vw rounded-2xl"
+                      decoding="async">
+                  </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold tracking-tight">2. Štruktúra a flexibilita v jednom</h2>
+            <div class="article-content mt-4">
+                <p>Vieme, že každý študent je iný. Preto ti Premedis ponúka to najlepšie z oboch svetov:</p>
+            </div>
+        </div>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+            <div class="p-6 rounded-xl" style="background-color: var(--md-sys-color-surface-container-low);">
+                <h3 class="text-2xl font-bold">Štruktúrovaná cesta</h3>
+                <div class="article-content mt-2">
+                    <p>Pre tých, ktorí chcú jasný plán. Náš kurz ťa prevedie všetkými témami krok za krokom, v logickom poradí, presne tak, ako by si mal postupovať.</p>
+                </div>
+                <div class="mt-4">
+                    <img
+                    src="/assets/images/path.svg"
+                    alt="Štrukturovaná cesta od A do B"
+                    width="800" height="450"
+                    loading="lazy"
+                    class="100vw rounded-2xl"
+                    decoding="async">
+                </div>
+            </div>
+            <div class="p-6 rounded-xl" style="background-color: var(--md-sys-color-surface-container-low);">
+                <h3 class="text-2xl font-bold">Flexibilná knižnica</h3>
+                <div class="article-content mt-2">
+                    <p>Pre tých, ktorí už vedia, kde majú slabiny. Kedykoľvek sa môžeš ponoriť do ktorejkoľvek témy, precvičiť si konkrétne otázky alebo si znova pozrieť video, ktoré potrebuješ. Ty máš plnú kontrolu nad svojím učením.</p>
+                </div>
+                <div class="mt-4">
+                    <img
+                    src="/assets/images/flexible.svg"
+                    alt="Flexibilná knižnica s rôznymi cestami"
+                    width="800" height="450"
+                    loading="lazy"
+                    class="100vw rounded-2xl"
+                    decoding="async">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold tracking-tight">3. Obsah od skutočných expertov</h2>
+                <div class="article-content mt-4">
+                    <p>Všetky naše materiály – od video lekcií až po každú jednu modelovú otázku – sú tvorené a overované naším tímom úspešných študentov z popredných fakúlt v SR a ČR. Toto nie sú generické informácie. Toto je cielené know-how od ľudí, ktorí si prijímačkami nedávno úspešne prešli a presne vedia, čo je dôležité a na čo si dať pozor.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                {% for key, author in sk.authors %}
+                    <a href="/sk/authors/{{ key }}/" class="group relative aspect-square">
+                        <img src="{{ author.photo }}" alt="{{ author.name }}" class="w-full h-full object-cover rounded-full">
+                        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white text-xs font-bold">{{ author.name | split(',') | first }}</span>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
