@@ -1,5 +1,5 @@
 ---
-layout: post-layout.njk
+layout: post-layout.html
 title: How Should I Prepare for the MCAT?
 description: What is the best and most effective way to prepare for the MCAT? We've collected the most important things for your perfect strategy.
 date: 2025-08-08

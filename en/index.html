@@ -1,11 +1,11 @@
 ---
-layout: layout.njk
+layout: layout.html
 title: Premedis - Your Path to Medical School
 description: The modern learning platform for future medical students. Study smarter and ace your medical school entrance exams with confidence.
 translationKey: home
 ---
 
-<div class="flex flex-col min-h-[100dvh]" style="background-color: var(--md-sys-color-surface);">
+<div class="flex flex-col min-h-[100dvh]" style="background-color: var(--md-sys-color-surface-container);">
     {% include "navigation.html" %}
     <header class="grow flex items-center py-12 md:py-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -43,7 +43,7 @@ translationKey: home
     </header>
 </div>
 
-<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container);">
+<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container-low);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Feeling lost in your prep?</h2>
@@ -103,8 +103,19 @@ translationKey: home
             </ul>
         </div>
         <div class="text-center">
-
-            <img src="/assets/images/doctor.png" class="rounded-2xl inline-block" alt="Premedis app preview">
+            <picture>
+                <source
+                  srcset="/assets/images/screenshot-dark.png"
+                  media="(prefers-color-scheme: dark)"
+                  type="image/svg+xml">
+              
+                <img
+                  src="/assets/images/screenshot.png"
+                  alt="Premedis app preview"
+                  loading="lazy"
+                  class="rounded-2xl inline-block"
+                  decoding="async">
+              </picture>
         </div>
     </div>
 </section>

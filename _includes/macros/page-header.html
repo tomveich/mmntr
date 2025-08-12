@@ -1,0 +1,13 @@
+{# This macro generates a standard page introduction section #}
+{% macro pageHeader(heading, subheading) %}
+<header class="py-16 sm:py-24 text-center" style="background-color: var(--md-sys-color-surface-container);">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">{{ heading }}</h1>
+        {% if subheading %}
+        <div class="article-content mt-6">
+            <p class="text-xl">{{ subheading }}</p>
+        </div>
+        {% endif %}
+    </div>
+</header>
+{% endmacro %}

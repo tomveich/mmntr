@@ -1,5 +1,5 @@
 ---
-layout: post-layout.njk
+layout: post-layout.html
 title: 1.LF vs 2.LF vs 3.LF v Prahe - Ktorá lekárska fakulta je najlepšia?
 description: Porovnanie 1.LF, 2.LF a 3.LF. Všetko čo potrebuješ vedieť o lekárskych fakultách na Karlovej Univerzite v Prahe.
 date: 2025-07-24

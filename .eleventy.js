@@ -75,6 +75,12 @@ module.exports = function(eleventyConfig) {
   // Tell Eleventy to copy the assets folder
   eleventyConfig.addPassthroughCopy("assets");
 
+  // Locale specific assets including lector profile pics, etc
+  eleventyConfig.addPassthroughCopy("en/assets");
+  eleventyConfig.addPassthroughCopy("sk/assets");
+
+
+
   // Also copy images for blog posts
   eleventyConfig.addPassthroughCopy("sk/blog/**/*.{jpg,jpeg,png,gif,svg}");
   eleventyConfig.addPassthroughCopy("en/blog/**/*.{jpg,jpeg,png,gif,svg}");
@@ -155,6 +161,13 @@ module.exports = function(eleventyConfig) {
     html: true,
   });
 
+  // Override the default table renderer to wrap tables in a div (to enable scrolling on overflow)
+  md.renderer.rules.table_open = () => { return '<div class="table-wrapper"><table class="w-full">' };
+  md.renderer.rules.table_close = () => { return '</table></div>' };
+
+  // Tell Eleventy to use our custom-configured markdown-it instance
+  eleventyConfig.setLibrary("md", md);
+  
   eleventyConfig.addFilter("markdown", (content) => {
     return md.render(content);
   });

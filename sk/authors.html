@@ -1,17 +1,17 @@
 ---
 pagination:
-  data: en.authors
+  data: sk.authors
   size: 1
   alias: authorKey
-permalink: "/authors/{{ authorKey }}/"
-layout: layout.njk
+permalink: "/sk/authors/{{ authorKey }}/"
+layout: layout.html
 eleventyComputed:
   # This sets the page title dynamically
-  title: "Articles by: {{ sk.authors[authorKey].name }}"
+  title: "Články od: {{ sk.authors[authorKey].name }}"
 ---
 
 {# This line creates the 'author' object for the rest of the template #}
-{% set author = en.authors[authorKey] %}
+{% set author = sk.authors[authorKey] %}
 
 {% include "header.html" %}
 
@@ -28,9 +28,9 @@ eleventyComputed:
     <hr class="my-12" style="border-color: var(--md-sys-color-outline-variant);">
 
     <!-- List of Posts by this Author -->
-    <h2 class="text-2xl font-bold">Articles from author {{ author.name | split(',') | first }}</h2>
+    <h2 class="text-2xl font-bold">Články od autora {{ author.name | split(',') | first }}</h2>
     <div class="mt-8 space-y-8">
-        {% set authorPosts = collections.post_en | where("data.author", authorKey) %}
+        {% set authorPosts = collections.post_sk | where("data.author", authorKey) %}
         {% for post in authorPosts | reverse %}
             <div>
                 <h3 class="text-xl font-bold">
@@ -39,7 +39,7 @@ eleventyComputed:
                 <p class="mt-2 text-sm" style="color: var(--md-sys-color-on-surface-variant);">{{ post.data.description }}</p>
             </div>
         {% else %}
-            <p>No articles from this author yet.</p>
+            <p>Tento autor zatiaľ nepublikoval žiadne články.</p>
         {% endfor %}
     </div>
 </div>

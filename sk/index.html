@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: layout.html
 title: Premedis - Tvoja cesta na medicínu
 description: Moderná vzdelávacia platforma pre budúcich medikov. Študuj inteligentnejšie a s istotou zvládni prijímačky na medicínu.
 translationKey: home
@@ -7,8 +7,10 @@ translationKey: home
 
 
 {#
-<div class="flex flex-col min-h-[100dvh]" style="background-color: var(--md-sys-color-surface);">
+<div class="flex flex-col min-h-[100dvh]" style="background-color: var(--md-sys-color-surface-container);">
+
     {% include "navigation.html" %}
+
     <header class="flex-grow flex items-center py-12 md:py-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -56,7 +58,7 @@ translationKey: home
 </div>
 #}
 
-<div class="flex flex-col min-h-[100dvh]" style="background-color: var(--md-sys-color-surface);">
+<div class="flex flex-col min-h-[100dvh]" style="background-color: var(--md-sys-color-surface-container);">
     {% include "navigation.html" %}
     <header class="flex-grow flex items-center py-12 md:py-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -95,7 +97,7 @@ translationKey: home
 </div>
 
 
-<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container);">
+<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container-low);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Cítiš sa pri príprave stratený?</h2>
@@ -155,12 +157,24 @@ translationKey: home
             </ul>
         </div>
         <div class="text-center">
-            <img src="/assets/images/girl_crop.jpg" class="rounded-2xl inline-block" alt="Ukážka aplikácie Premedis">
+            <picture>
+                <source
+                  srcset="/assets/images/screenshot-dark.png"
+                  media="(prefers-color-scheme: dark)"
+                  type="image/svg+xml">
+              
+                <img
+                  src="/assets/images/screenshot.png"
+                  alt="Ukážka aplikácie Premedis"
+                  loading="lazy"
+                  class="rounded-2xl inline-block"
+                  decoding="async">
+              </picture>
         </div>
     </div>
 </section>
 
-<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container-low);">
+<section class="py-16 sm:py-24" style="background-color: var(--md-sys-color-surface-container);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Uč sa od najlepších</h2>
@@ -168,22 +182,22 @@ translationKey: home
         </div>
         <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="text-center">
-                <img src="/assets/lectors/sk/1.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Martin">
+                <img src="/sk/assets/lectors/1.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Martin">
                 <h3 class="mt-4 font-bold text-lg">Martin, 4. ročník, 1.LF Praha</h3>
                 <p class="mt-1 text-sm" style="color: var(--md-sys-color-on-surface-variant);">Chémia bola moja nočná mora. Mojím cieľom je vysvetliť ti zložité koncepty jednoducho a jasne.</p>
             </div>
                 <div class="text-center">
-                <img src="/assets/lectors/sk/2.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Andrej">
+                <img src="/sk/assets/lectors/2.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Andrej">
                 <h3 class="mt-4 font-bold text-lg">Andrej, 2. ročník, 3.LF Praha</h3>
                 <p class="mt-1 text-sm" style="color: var(--md-sys-color-on-surface-variant);">Rád sa posúvam ďalej a vždy sa snažím dosiahnuť niečo viac.</p>
             </div>
                 <div class="text-center">
-                <img src="/assets/lectors/sk/3.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Barbora">
+                <img src="/sk/assets/lectors/3.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Barbora">
                 <h3 class="mt-4 font-bold text-lg">Barbora, 4. ročník, 2. LF Praha</h3>
                 <p class="mt-1 text-sm" style="color: var(--md-sys-color-on-surface-variant);">Ukážem ti, že fyzika nemusí byť strašiak a že sa dá zvládnuť s prehľadom.</p>
             </div>
                 <div class="text-center">
-                <img src="/assets/lectors/sk/4.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Peter">
+                <img src="/sk/assets/lectors/4.jpg" class="w-32 h-32 rounded-full mx-auto" alt="Peter">
                 <h3 class="mt-4 font-bold text-lg">Peter, 4. ročník, MUNI Brno</h3>
                 <p class="mt-1 text-sm" style="color: var(--md-sys-color-on-surface-variant);">Mojím cieľom je pomôcť ti vybudovať si systém v biológii, aby si na nič dôležité nezabudol.</p>
             </div>

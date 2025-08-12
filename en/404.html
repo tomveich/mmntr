@@ -1,11 +1,31 @@
 ---
-layout: layout.njk
 title: "404"
-description: Zdá sa, že táto stránka neexistuje. Skontrolujte adresu alebo sa vráťte na domovskú stránku.
+description: Page not found
 permalink: 404.html
 noindex: true
 ---
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    {% include "partials/head-common.html" %}
+</head>
+<body class="antialiased">
 
+    <main style="background-color: var(--md-sys-color-surface);">
+        <div class="text-center py-24 sm:py-32 px-4">
+            <p class="text-8xl font-semibold" style="color: var(--md-sys-color-primary);">404</p>
+            <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">{{ i18n[lang].404_title }}</h1>
+            <p class="mt-6 text-base leading-7" style="color: var(--md-sys-color-on-surface-variant);">
+                {{ i18n[lang].404_description }}
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
+
+
+{# COMMENTED OUT
 {% include "header.html" %}
 
 
@@ -21,3 +41,4 @@ noindex: true
         </md-filled-button>
     </div>
 </div>
+#}

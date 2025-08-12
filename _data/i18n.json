@@ -1,5 +1,8 @@
 {
     "en": {
+      "navigation": [
+        { "text": "Blog", "url": "/blog/" }
+      ],
       "nav_blog": "Blog",
       "nav_login": "Sign In",
       "nav_pricing": "Pricing",
@@ -23,6 +26,11 @@
 
     },
     "sk": {
+      "navigation": [
+        { "text": "Blog", "url": "/blog/" },
+        { "text": "Naša metóda", "url": "/nasa-metoda/" },
+        { "text": "FAQ", "url": "/faq/" }
+      ],
       "nav_blog": "Blog",
       "nav_login": "Prihlásenie",
       "nav_pricing": "Cenník",

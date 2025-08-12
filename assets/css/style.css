@@ -202,6 +202,11 @@ ul li::marker {
     /* Style for standard data cells */
     @apply p-4 align-middle;
   }
+
+  .table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
 }
 
 /* --- END: Blog post style --- */
@@ -271,4 +276,9 @@ md-tonal-button {
 .faq-answer {
   overflow: hidden;
   transition: height 0.3s ease-in-out;
+}
+
+/* Colors of FAQ items */
+.faq-item {
+  background-color: var(--md-sys-color-surface-container-low);
 }

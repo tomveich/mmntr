@@ -1,8 +1,8 @@
 ---
-layout: layout.njk
+layout: layout.html
 title: Premedis Blog
-description: Tipy, triky a návody, ako sa úspešne dostať na medicínu.
-permalink: /sk/blog/index.html
+description: Tips, tricks, and guides on how to successfully get into medical school.
+permalink: /blog/index.html
 translationKey: blog
 ---
 
@@ -10,8 +10,8 @@ translationKey: blog
 
 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="space-y-12">
-        {# This loops over the 'post_sk' collection, showing only Slovak posts #}
-        {% for post in collections.post_sk | reverse %}
+        {# This loops over the 'post_en' collection, showing only English posts #}
+        {% for post in collections.post_en | reverse %}
             <article class="flex flex-col border-b pb-8" style="border-color: var(--md-sys-color-outline-variant);">
                 <time datetime="{{ post.date | isoDate }}" class="text-sm" style="color: var(--md-sys-color-on-surface-variant);">
                     {{ post.date | displayDate }}
@@ -23,7 +23,7 @@ translationKey: blog
                     {{ post.data.description }}
                 </p>
                 <div class="mt-4">
-                    <md-text-button href="{{ post.url }}">Čítať viac</md-text-button>
+                    <md-text-button href="{{ post.url }}">Read more</md-text-button>
                 </div>
             </article>
         {% endfor %}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    {% include "partials/head-common.njk" %}
+    {% include "partials/head-common.html" %}
 
 <script type="application/ld+json">
 {
@@ -60,34 +60,33 @@
             </div>
         </header>
 
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    {# This section only appears if a 'summary' exists in the front matter #}
-    {% if summary %}
-        <section 
-            class="my-8 p-6 rounded-xl" 
-            style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
+        <div class="py-8">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+                {# This section only appears if a 'summary' exists in the front matter #}
+                {% if summary %}
+                    <section 
+                        class="my-8 p-6 rounded-xl" 
+                        style="background-color: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">
+                        
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined">lightbulb</span>
+                            <h2 class="text-xl font-bold">{{ i18n[lang].summary_heading }}</h2>
+                        </div>
             
-            <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined">lightbulb</span>
-                <h2 class="text-xl font-bold">{{ i18n[lang].summary_heading }}</h2>
+                        <div class="summary-content mt-4">
+                            {{ summary | markdown | safe }}
+                        </div>
+                    </section>
+                {% endif %}
             </div>
-
-            <div class="summary-content mt-4">
-                {{ summary | markdown | safe }}
-            </div>
-        </section>
-    {% endif %}
-</div>
-
-
                 
-        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="article-content">
-                {{ content | toc | safe }}
-                <hr class="my-8">
-                {{ content | safe }}
-            </div>
-        </article>
+            <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="article-content">
+                    {{ content | toc | safe }}
+                    {{ content | safe }}
+                </div>
+            </article>
+        </div>
     </main>
 
     {# The authorData is now automatically prepared for us! #}
