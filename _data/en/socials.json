@@ -1,0 +1,17 @@
+[
+    { 
+        "name": "Facebook", 
+        "url": "https://facebook.com/premedis", 
+        "icon": "facebook" 
+    },
+    { 
+        "name": "Discord", 
+        "url": "https://discord.gg/E2PManhByh", 
+        "icon": "discord" 
+    },
+    { 
+        "name": "YouTube", 
+        "url": "https://www.youtube.com/@premedis", 
+        "icon": "youtube" 
+    }
+]

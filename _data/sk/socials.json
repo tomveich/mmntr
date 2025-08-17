@@ -1,0 +1,27 @@
+[
+    { 
+        "name": "Facebook", 
+        "url": "https://facebook.com/premedis", 
+        "icon": "facebook" 
+    },
+    { 
+        "name": "Instagram", 
+        "url": "https://www.instagram.com/premedis_czsk", 
+        "icon": "instagram" 
+    },
+    { 
+        "name": "TikTok", 
+        "url": "https://www.tiktok.com/@premedis_czsk", 
+        "icon": "tiktok" 
+    },
+    { 
+        "name": "Discord", 
+        "url": "https://discord.gg/E2PManhByh", 
+        "icon": "discord" 
+    },
+    { 
+        "name": "YouTube", 
+        "url": "https://www.youtube.com/@Premedis_CZSK", 
+        "icon": "youtube" 
+    }
+]
